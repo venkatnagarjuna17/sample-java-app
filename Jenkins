@@ -1,1 +1,18 @@
-
+pipeline {
+    agent {label 'slave'}
+    stages {
+    tools{
+    maven 'maven'
+    jdk 'jdk'
+    }
+    stage ('build'){
+    steps
+    {
+    echo 'building'
+    sh 'mvn clean'
+    sh 'mvn install'
+    }
+    }
+    
+          }
+}
