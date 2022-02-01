@@ -1,10 +1,10 @@
 pipeline {
     agent {label 'slave'}
-    stages {
     tools {
     maven 'maven'
     jdk 'jdk'
     }
+    stages {
     stage ('build'){
     steps
     {
